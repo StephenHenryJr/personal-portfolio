@@ -2,9 +2,7 @@ import './navbar.css'
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../../assets/img/logo.svg';
-import navIcon1 from '../../assets/img/nav-icon1.svg';
-import navIcon2 from '../../assets/img/nav-icon2.svg';
-import navIcon3 from '../../assets/img/nav-icon3.svg';
+import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 
 export const NavBar = () => {
@@ -12,9 +10,9 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  //Function that checks if the user had scrolled the screen more than 51px
-  //If true, we use setScrolled to change the state of scrolled from false to true
   useEffect(() => {
+    //Function that checks if the user had scrolled the screen more than 51px
+    //If true, we use setScrolled to change the state of scrolled from false to true
     const onScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -28,6 +26,7 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
+  //Function that takes in a value and sets activeLink to that value using setActiveLink
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   }
@@ -50,14 +49,14 @@ export const NavBar = () => {
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
               <Nav.Link href="#work" className={activeLink === 'work' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('work')}>Work</Nav.Link>
             </Nav>
-            <span className="navbar-text">
+            <div className="navbar-text">
               <div className="social-icon">
-                <a href="www.linkedin.com"><img src={navIcon1} alt="icon1" /></a>
-                <a href="www.facebook.com"><img src={navIcon2} alt="icon2" /></a>
-                <a href="www.instagram.com"><img src={navIcon3} alt="icon3" /></a>
+                <a href="www.github.com"><BsGithub /></a>
+                <a href="www.twitter.com"><BsTwitter /></a>
+                <a href="www.linkedin.com"><BsLinkedin /></a>
               </div>
-            </span>
-            <button className="vvd"><span>Let’s Connect</span></button>
+            </div>
+            <button className="connect"><span>Let’s Connect</span></button>
           </Navbar.Collapse>
 
         </Container>
