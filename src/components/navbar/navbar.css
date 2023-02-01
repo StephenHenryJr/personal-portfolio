@@ -1,7 +1,8 @@
 /* NavBar styles */
 nav.navbar {
     padding: 18px 0;
-    position: fixed;
+    /* position: fixed; */
+    background-color: #17181a;
     width: 100%;
     top: 0;
     z-index: 9999;
@@ -21,7 +22,7 @@ nav.navbar.scrolled {
 
 /* NavBar left side logo styles */
 nav.navbar a.navbar-brand {
-    width: 19%;
+    width: 15%;
 }
 
 /* Navbar link styles Home, Skills, Work */
@@ -73,23 +74,14 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     transform: scale(1);
 }
 
-.social-icon a img {
-    width: 40%;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
-}
 
-.social-icon a:hover img {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-}
-
-nav svg {
+.social-icon svg {
     color: white;
     font-size: 20px;
     z-index: 1;
 }
 
-nav svg:hover {
+.social-icon svg:hover {
     color: black;
 }
 
