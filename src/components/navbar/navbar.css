@@ -1,12 +1,16 @@
 /* NavBar styles */
 nav.navbar {
     padding: 18px 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     top: 0;
     z-index: 9999;
     transition: 0.32s ease-in-out;
 
+}
+
+nav.navbar-collapse.collapse.show {
+    background-color: black;
 }
 
 nav.navbar.scrolled {
