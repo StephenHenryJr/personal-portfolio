@@ -5,12 +5,19 @@ import office from "../../assets/img/hero-img2.webp";
 import "./banner.css";
 
 export const Banner = () => {
+  // Sets loopNum variable to 0 initially
   const [loopNum, setLoopNum] = useState(0);
+  // Sets isDeleting variable to true 
   const [isDeleting, setIsDeleting] = useState(false);
+  // Sets text variable to an empty string
   const [text, setText] = useState("");
+  // Sets delta variable to random number 
   const [delta, setDelta] = useState(300 - Math.random() * 100);
+  // Sets index varaible to to 1
   const [index, setIndex] = useState(1);
+  // Variable containing our words to rotate in our banner
   const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  // Variable containing the number 200
   const period = 2000;
 
   useEffect(() => {
@@ -23,6 +30,7 @@ export const Banner = () => {
     };
   }, [text]);
 
+  
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
