@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsArrowRightCircle } from "react-icons/bs";
-import officeDay from '../../assets/img/hero-img.webp';
-import './banner.css'
-
+import office from "../../assets/img/hero-img2.webp";
+import "./banner.css";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -55,9 +54,11 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={8}>
+          <Col xs={12} lg={6} md={12} xl={7}>
             <div>
-              <span className="tagline">Welcome to my Portfolio</span>
+              <div className="box">
+                <span className="tagline">Welcome to my Portfolio</span>
+              </div>
               <h1>
                 {`Hi! I'm Stephen,`}{" "}
                 <span
@@ -79,8 +80,8 @@ export const Banner = () => {
               </button>
             </div>
           </Col>
-          <Col xs={12} md={6} xl={4}>
-            <img src={officeDay} alt="Header Img" />
+          <Col xs={12} lg={6} md={12} xl={5}>
+            <img src={office} alt="Header Img" />
           </Col>
         </Row>
       </Container>
